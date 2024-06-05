@@ -12,20 +12,21 @@ This project addresses the container load assignment problem where various produ
 ### Mathematical Model
 
 **Decision Variables:**
-- \( x_{ij} \): Binary variable indicating if product \( i \) is placed in container \( j \).
-- \( y_j \): Binary variable indicating if container \( j \) is used.
+- $x_{ij}$: Binary variable indicating if product $i$ is placed in container $j$.
+- $y_j$: Binary variable indicating if container $j$ is used.
 
 **Objective Function:**
-\[ \text{Minimize } Z = \sum_j y_j \]
+$ \text{Minimize } Z = \sum_j y_j $
 
 **Constraints:**
 1. Each product must be placed in exactly one container:
-\[ \sum_j x_{ij} = 1 \quad \forall i \]
+   \[ \sum_j x_{ij} = 1 \quad \forall i \]
 2. Container capacity constraints:
-\[ \sum_i v_i x_{ij} \leq C_j y_j \quad \forall j \]
+   \[ \sum_i v_i x_{ij} \leq C_j y_j \quad \forall j \]
 3. Binary constraints:
-\[ y_j \in \{0, 1\} \quad \forall j \]
-\[ x_{ij} \in \{0, 1\} \quad \forall i, j \]
+   \[ y_j \in \{0, 1\} \quad \forall j \]
+   \[ x_{ij} \in \{0, 1\} \quad \forall i, j \]
+
 
 The chosen method for this project is Agglomerative Clustering due to its effectiveness in clustering problems and its computational efficiency.
 
