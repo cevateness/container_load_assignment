@@ -1,7 +1,5 @@
-# heuristics
-This repository contains various projects focused on heuristics for optimization. It includes implementations of different heuristic algorithms.
 
-# 1. Container Load Assignment Problem
+# Container Load Assignment Problem
 
 This repository contains the code and data for solving the Container Load Assignment Problem, which focuses on optimally assigning loads to containers of varying capacities with no shape or 3d constraints. The main goal is to minimize the number of containers used.
 
@@ -16,16 +14,24 @@ This project addresses the container load assignment problem where various produ
 - $y_j$: Binary variable indicating if container $j$ is used.
 
 **Objective Function:**
-$ \text{Minimize } Z = \sum_j y_j $
+```math
+ \text{Minimize } Z = \sum_j y_j
+```
 
 **Constraints:**
 1. Each product must be placed in exactly one container:
-   \[ \sum_j x_{ij} = 1 \quad \forall i \]
-2. Container capacity constraints:
-   \[ \sum_i v_i x_{ij} \leq C_j y_j \quad \forall j \]
-3. Binary constraints:
-   \[ y_j \in \{0, 1\} \quad \forall j \]
-   \[ x_{ij} \in \{0, 1\} \quad \forall i, j \]
+   ```math
+   \sum_j x_{ij} = 1 \quad \forall i 
+   ```
+3. Container capacity constraints:
+   ```math
+    \sum_i v_i x_{ij} \leq C_j y_j \quad \forall j
+   ```
+5. Binary constraints:
+   ```math
+    y_j \in \{0, 1\} \quad \forall j \quad | \quad
+   x_{ij} \in \{0, 1\} \quad \forall i, j 
+   ```
 
 
 The chosen method for this project is Agglomerative Clustering due to its effectiveness in clustering problems and its computational efficiency.
